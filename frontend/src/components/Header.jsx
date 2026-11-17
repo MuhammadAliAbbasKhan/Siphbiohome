@@ -68,7 +68,7 @@ export default function Header({ onOpenQuiz, onStartTesting }) {
           justifyContent: "space-between",
         }}
       >
-        {/* LOGO AREA: Exact SiPhoX HEALTH / SiPhBio HOME layout */}
+        {/* LOGO AREA: SiPhBio HOME layout */}
         <Link
           to="/"
           onClick={closeMenu}
@@ -295,7 +295,7 @@ export default function Header({ onOpenQuiz, onStartTesting }) {
               fontSize: "0.88rem",
             }}
           >
-            <span>SiPhox, Inc. / SiPhBio Home</span>
+            <span>SiPhBioHome, Inc.</span>
             <button
               onClick={onStartTesting || (() => handleNavClick("/pricing"))}
               style={{

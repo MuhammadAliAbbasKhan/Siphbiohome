@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronUp, Instagram, Twitter, Facebook, Youtube, Linkedin } from 'lucide-react';
+import { ChevronUp } from 'lucide-react';
 
 export function Footer({ setCurrentPage }) {
   const scrollToTop = () => {
@@ -73,7 +73,7 @@ export function Footer({ setCurrentPage }) {
                   letterSpacing: '-0.03em',
                 }}
               >
-                SiPho
+                SiPhBio
               </span>
               
               {/* Crossed X Icon */}
@@ -83,7 +83,7 @@ export function Footer({ setCurrentPage }) {
                 <circle cx="14" cy="14" r="3.2" fill="#2bbdb9" />
               </svg>
 
-              {/* HEALTH text with cyan underline */}
+              {/* HOME text with cyan underline */}
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                 <span
                   style={{
@@ -95,7 +95,7 @@ export function Footer({ setCurrentPage }) {
                     lineHeight: '1.1',
                   }}
                 >
-                  HEALTH
+                  HOME
                 </span>
                 <div
                   style={{
@@ -126,7 +126,7 @@ export function Footer({ setCurrentPage }) {
                 <li><Link to="/company" style={footerLinkStyle}>Careers</Link></li>
               </ul>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.92rem' }}>
-                <li><Link to="/science" style={footerLinkStyle}>SiPhox Tech</Link></li>
+                <li><Link to="/science" style={footerLinkStyle}>SiPhBio Tech</Link></li>
                 <li><Link to="/news" style={footerLinkStyle}>Content Hub</Link></li>
                 <li><Link to="/news" style={footerLinkStyle}>Health Articles</Link></li>
               </ul>
@@ -144,20 +144,20 @@ export function Footer({ setCurrentPage }) {
               Company
             </h3>
             
-            <div style={{ fontStyle: 'italic', fontSize: '0.92rem', color: '#64748b', lineHeight: 1.5, marginBottom: '1.2rem' }}>
-              SiPhox, Inc.<br />
-              111 Terrace Hall Avenue, Burlington<br />
-              MA 01803 US
+            <div style={{ fontSize: '0.92rem', color: '#64748b', lineHeight: 1.5, marginBottom: '0.5rem', fontWeight: 500 }}>
+              SiPhBioHome, Inc.
             </div>
 
             <div style={{ fontSize: '0.92rem', color: '#64748b', marginBottom: '0.5rem' }}>
-              <a href="mailto:support@siphoxhealth.com" style={{ color: '#64748b', textDecoration: 'none' }}>
-                support@siphoxhealth.com
-              </a>
+              Email coming soon
+            </div>
+
+            <div style={{ fontSize: '0.92rem', color: '#64748b', marginBottom: '0.5rem' }}>
+              Phone coming soon
             </div>
 
             <div style={{ fontSize: '0.92rem', color: '#64748b' }}>
-              (781) 202-5192
+              Address coming soon
             </div>
 
             {/* ORANGE CIRCULAR BACK-TO-TOP BUTTON */}
@@ -198,42 +198,28 @@ export function Footer({ setCurrentPage }) {
         {/* HORIZONTAL SEPARATOR */}
         <div style={{ borderTop: '1px solid #e2e8f0', marginBottom: '2.5rem' }} />
 
-        {/* BOTTOM SECTION: DISCLAIMER & SOCIAL ICONS */}
+        {/* BOTTOM SECTION: DISCLAIMER & COPYRIGHT */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr auto',
             gap: '3rem',
-            alignItems: 'flex-start',
+            alignItems: 'center',
           }}
         >
           {/* MEDICAL DISCLAIMER */}
           <div style={{ fontSize: '0.82rem', color: '#94a3b8', lineHeight: 1.65, maxWidth: '820px' }}>
             <p style={{ marginBottom: '0.75rem' }}>
-              The reference ranges and insights presented in the SiPhox Health dashboard are meant to improve readability and provide context, however you should consult with your physician for a more formal interpretation of your results. No communication from SiPhox Health is meant to be or should be taken as medical advice. SiPhox Health is a wellness-only service and is not designed to diagnose, prevent, or treat any disease. If you are concerned about any of the data in your dashboard please consult your physician immediately.
+              The reference ranges and insights presented in the SiPhBioHome dashboard are meant to improve readability and provide context, however you should consult with your physician for a more formal interpretation of your results. No communication from SiPhBioHome is meant to be or should be taken as medical advice. SiPhBioHome is a wellness-only service and is not designed to diagnose, prevent, or treat any disease. If you are concerned about any of the data in your dashboard please consult your physician immediately.
             </p>
             <p>
-              SiPhox Health mail-in testing is fulfilled and provided by third parties, in compliance with CLIA and CAP accredited clinical laboratory standards.
+              SiPhBioHome testing is fulfilled and provided in compliance with accredited clinical laboratory standards.
             </p>
           </div>
 
-          {/* SOCIAL ICONS (CYAN CIRCLES) */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" style={socialIconStyle}>
-              <Instagram size={18} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" style={socialIconStyle}>
-              <Twitter size={18} />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" style={socialIconStyle}>
-              <Facebook size={18} />
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" style={socialIconStyle}>
-              <Youtube size={18} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={socialIconStyle}>
-              <Linkedin size={18} />
-            </a>
+          {/* COPYRIGHT */}
+          <div style={{ fontSize: '0.88rem', color: '#94a3b8', whiteSpace: 'nowrap' }}>
+            © {new Date().getFullYear()} SiPhBioHome. All rights reserved.
           </div>
         </div>
       </div>
@@ -245,17 +231,4 @@ const footerLinkStyle = {
   color: '#64748b',
   textDecoration: 'none',
   transition: 'color 0.2s ease',
-};
-
-const socialIconStyle = {
-  width: '40px',
-  height: '40px',
-  borderRadius: '50%',
-  border: '1.5px solid #2bbdb9',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  color: '#2bbdb9',
-  backgroundColor: 'transparent',
-  transition: 'all 0.2s ease',
 };
